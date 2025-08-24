@@ -12,7 +12,7 @@ options = (("A.RAIGAD", "B.PRATAPGAD","C.PANHALA","D.SHIVNERI"),
 answers =("A","C","B","B","D")
 guesses =[]
 score = 0
-question_num= 0
+question_num= 0                         #its an index operator to operate index of options
 
 for question in questions:
     print("****************************")
@@ -20,9 +20,9 @@ for question in questions:
     for option in options [question_num]:
         print(option)
 
-    guess = input("enter A , B, C, D----").upper()
-    guesses.append(guess)
-    if guess == answers[question_num]:
+    guess = input("enter A , B, C, D----").upper() #if user type in lower use .upper() to default Upper
+    guesses.append(guess)                          #append will add guesses in list to display in the end
+    if guess == answers[question_num]:            
         score +=1
         print ("correct answer ! ")
     else:
